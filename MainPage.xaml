@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="Center" Margin="10">
+            <Label x:Name="ScoreLabel" Text="Wynik: 0" FontSize="20" />
+            <Label x:Name="TimeLabel" Text="Czas: 60" FontSize="20" Margin="20,0,0,0" />
+        </StackLayout>
+        <AbsoluteLayout x:Name="GameArea" Grid.Row="1" BackgroundColor="LightGray" />
+        <Button x:Name="ResetButton" Text="Resetuj" Grid.Row="2" Margin="10" Clicked="OnResetClicked" BackgroundColor="Pink"/>
+    </Grid>
+</ContentPage>
